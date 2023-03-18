@@ -1,1 +1,254 @@
-/* dev styles here */
+:root {
+    --navy: #0c263e;
+    --dk-navy: #071629;
+    --orange: #eb5629;
+    --off-white: #f5f5f5;
+}
+
+body {
+    color: var(--off-white);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+    max-width: 70ch;
+    margin-bottom: 1.5rem;
+}
+
+header {
+    padding: 1rem 0;
+    background-color: var(--navy);
+}
+
+.inner-container {
+    padding: 0 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-btn {
+    background-color: var(--navy);
+    border: none;
+    color: var(--off-white);
+    display: flex;
+    text-transform: lowercase;
+    flex-direction: column;
+}
+
+.toggle-btn svg {
+    width: 35px;
+    fill: var(--off-white);
+    display: block;
+}
+
+
+ul.menu {
+    border-bottom: 1px solid var(--off-white);
+    margin-bottom: 1.5rem;
+}
+
+ul.menu a {
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+}
+
+ul.submenu {
+    padding-left: 1.875rem;
+}
+
+ul.utility-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul.utility-nav a {
+    text-transform: uppercase;
+    background: rgb(246, 64, 9);
+    background: linear-gradient(220deg, rgba(246, 64, 9, 1) 0%, rgba(214, 89, 10, 1) 75%, rgba(14, 63, 73, 1) 100%);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--off-white);
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+ul.menu a:hover,
+ul.menu a:active {
+    background-color: var(--orange);
+    text-decoration: underline;
+}
+
+ul.menu li:focus-within>ul,
+ul.menu li>ul:focus {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul.menu>li {
+    line-height: 35px;
+    margin: 0.5rem 0;
+}
+
+ul.submenu a {
+    text-decoration: none;
+}
+
+a.first-link {
+    font-size: 1.3rem;
+}
+
+header nav {
+    position: absolute;
+    left: 0;
+    top: 88px;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: var(--navy);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+
+.show-nav {
+    max-height: 28.125rem;
+}
+
+/* Typography */
+
+h2 {
+    font-size: 3.125rem;
+    margin-bottom: 1.5rem;
+}
+
+h1,
+h2 {
+    font-family: 'Pacifico';
+}
+
+h1 a {
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+body {
+    color: var(--dk-navy);
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+section {
+    padding: 3.235rem;
+}
+
+section {
+    padding: 3.125rem 0;
+}
+
+.drop-down {
+    display: none;
+}
+
+@media screen and (min-width: 850px) {
+    .toggle-btn {
+        display: none;
+    }
+
+    header nav {
+        max-height: 28rem;
+        position: static;
+        width: auto;
+        padding: 0;
+        display: flex;
+        gap: 1.5rem;
+        overflow: visible;
+        align-items: center;
+    }
+
+    ul.menu {
+        display: flex;
+        gap: 1.5rem;
+        border: none;
+    }
+
+    ul.menu li {
+        position: relative;
+    }
+
+    ul.menu li:hover>ul.submenu {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+
+
+    ul.submenu {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background-color: var(--navy);
+        white-space: nowrap;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        text-align: right;
+        padding: 0 1rem;
+
+    }
+
+    ul.submenu li a {
+        font-size: 16px;
+    }
+
+    ul.menu,
+    ul.utility-nav {
+        margin: 0;
+    }
+
+    .first-link {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .drop-down {
+        display: inline-block;
+        width: 15px;
+        fill: var(--off-white);
+    }
+
+}
+
+@media screen and (min-width: 980px) {
+    .gallery-imgs {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .gallery-imgs img {
+        width: 50%;
+    }
+
+    .gallery-imgs img:last-of-type {
+        position: relative;
+        top: 100px;
+        right: 150px;
+    }
+}
