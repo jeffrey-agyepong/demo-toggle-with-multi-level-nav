@@ -22,7 +22,7 @@ header {
 
 .inner-container {
     padding: 0 1rem;
-    max-width: 1400px;
+    max-width: 87.5rem;
     margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 .toggle-btn svg {
-    width: 35px;
+    width: 2.1875rem;
     fill: var(--off-white);
     display: block;
 }
@@ -97,7 +97,7 @@ ul.menu li>ul:focus {
 }
 
 ul.menu>li {
-    line-height: 35px;
+    line-height: 2.1875rem;
     margin: 0.5rem 0;
 }
 
@@ -165,7 +165,7 @@ section {
     display: none;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 53.125rem) {
     .toggle-btn {
         display: none;
     }
@@ -214,7 +214,7 @@ section {
     }
 
     ul.submenu li a {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     ul.menu,
@@ -236,7 +236,7 @@ section {
 
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 61.25rem) {
     .gallery-imgs {
         display: flex;
         align-items: flex-start;
